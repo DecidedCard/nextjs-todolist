@@ -1,0 +1,15 @@
+{
+  "companyInfo": {
+    "name": "다시도전(2트쨰)",
+    "desctiption": "한번 날렸다가 다시 하는건데 잘 됐으면 좋겠네요.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThICWPOonwMcDz99ii3fZ3FVBBf3K-u_sN5Q&usqp=CAU"
+  },
+  "todos": [
+    {
+      "id": "1",
+      "title": "커피 마시기",
+      "contents": "아메리카노 마시기",
+      "isDone": false
+    }
+  ]
+}
