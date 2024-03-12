@@ -5,7 +5,7 @@ import React from "react";
 const AboutPage = async () => {
   const res = await fetch("http://localhost:3000/api/company");
   const { companyInfo }: companyInfoType = await res.json();
-  console.log(companyInfo);
+
   return (
     <main>
       <div>
