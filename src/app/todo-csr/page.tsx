@@ -6,7 +6,8 @@ const TodoCSRPage = () => {
   return (
     <main>
       <InputForm />
-      <TodoList />
+      <TodoList isActive={false} />
+      <TodoList isActive={true} />
     </main>
   );
 };

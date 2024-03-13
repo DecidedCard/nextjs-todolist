@@ -14,6 +14,8 @@ const useTodoQuery = () => {
       const { todoList }: TodoListType = await res.json();
       return todoList;
     },
+    retry: 0,
+    refetchOnWindowFocus: false,
   });
 
   const queryClient = useQueryClient();
