@@ -12,6 +12,8 @@ const TodoList = () => {
     return <>에러!</>;
   }
 
+  console.log(todoList);
+
   return (
     <section>
       {todoList?.map((item) => {
@@ -19,6 +21,8 @@ const TodoList = () => {
           <div key={item.id}>
             <h2>{item.title}</h2>
             <p>{item.contents}</p>
+            <button>{item.isDone ? "취소" : "완료"}</button>
+            <button>삭제</button>
           </div>
         );
       })}

@@ -4,10 +4,15 @@ import useTodoInputForm from "@/hook/useTodoInputForm";
 import React from "react";
 
 const InputForm = () => {
-  const { title, onChamgeTitleHandler, contents, onChamgeContentsHandler } =
-    useTodoInputForm();
+  const {
+    title,
+    onChamgeTitleHandler,
+    contents,
+    onChamgeContentsHandler,
+    onSubmitHandler,
+  } = useTodoInputForm();
   return (
-    <form onSubmit={(e) => {}}>
+    <form onSubmit={onSubmitHandler}>
       <input
         type="text"
         placeholder="제목을 입력해주세요"
@@ -20,6 +25,7 @@ const InputForm = () => {
         value={contents}
         onChange={onChamgeContentsHandler}
       />
+      <button type="submit">등록</button>
     </form>
   );
 };
