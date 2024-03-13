@@ -6,7 +6,9 @@ import React from "react";
 const TodoCSRPage = () => {
   return (
     <main>
-      <ReportNavigateButton />
+      <div className="text-center">
+        <ReportNavigateButton />
+      </div>
       <InputForm />
       <TodoList isActive={false} />
       <TodoList isActive={true} />

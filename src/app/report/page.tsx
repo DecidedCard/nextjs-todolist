@@ -4,7 +4,7 @@ import React from "react";
 const ReportPage = async () => {
   const res = await fetch("http://localhost:3000/api/todoList", {
     next: {
-      revalidate: 5,
+      revalidate: 10,
     },
   });
 
