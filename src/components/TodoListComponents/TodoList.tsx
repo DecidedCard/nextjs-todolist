@@ -14,16 +14,19 @@ const TodoList = ({ isActive }: { isActive: boolean }) => {
   }
 
   return (
-    <>
-      <h2>{isActive ? "Done!!!" : "Working..."}</h2>
-      <section>
+    <div className="min-h-72">
+      <h2 className="text-2xl">{isActive ? "Done!!!" : "Working..."}</h2>
+      <section className="flex flex-wrap m-2">
         {todoList
           ?.filter((item) => {
             return item.isDone === isActive;
           })
           .map((item) => {
             return (
-              <div key={item.id}>
+              <div
+                key={item.id}
+                className="border border-solid border-slate-950 w-64 rounded-lg m-2"
+              >
                 <h3>{item.title}</h3>
                 <p>{item.contents}</p>
                 <button onClick={() => updateMutate(item)}>
@@ -34,7 +37,7 @@ const TodoList = ({ isActive }: { isActive: boolean }) => {
             );
           })}
       </section>
-    </>
+    </div>
   );
 };
 
