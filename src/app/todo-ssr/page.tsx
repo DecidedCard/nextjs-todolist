@@ -3,9 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const TodoSSRPage = async () => {
-  const res = await fetch("http://localhost:3000/api/todoList", {
-    cache: "no-cache",
-  });
+  const res = await fetch("http://localhost:3000/api/todoList");
   const { todoList }: TodoListType = await res.json();
 
   return (

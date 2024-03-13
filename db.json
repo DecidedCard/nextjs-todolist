@@ -1,8 +1,8 @@
 {
   "companyInfo": {
     "name": "Next.js TodoList",
-    "desctiption": "Next.js로 만든 TodoList입니다.",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThICWPOonwMcDz99ii3fZ3FVBBf3K-u_sN5Q&usqp=CAU"
+    "desctiption": "Next.js로 만든 TodoList.",
+    "image": "https://images.velog.io/images/ducks1077/post/397ed207-80a4-4505-a90c-82c88fe3c9d3/todolist.png"
   },
   "todos": [
     {
@@ -18,49 +18,7 @@
       "isDone": true
     },
     {
-      "id": "a399",
-      "title": "테스트",
-      "contents": "테스트",
-      "isDone": true
-    },
-    {
-      "id": "34ac",
-      "title": "테스트",
-      "contents": "테스트",
-      "isDone": false
-    },
-    {
-      "id": "46b8",
-      "title": "테스트",
-      "contents": "테스트",
-      "isDone": false
-    },
-    {
-      "id": "11ea",
-      "title": "테스트",
-      "contents": "테스트",
-      "isDone": true
-    },
-    {
-      "id": "89b3",
-      "title": "테스트",
-      "contents": "테스트",
-      "isDone": true
-    },
-    {
-      "id": "c3d7",
-      "title": "테스트",
-      "contents": "테스트",
-      "isDone": true
-    },
-    {
-      "id": "1619",
-      "title": "테스트",
-      "contents": "테스트",
-      "isDone": false
-    },
-    {
-      "id": "dc81",
+      "id": "ff2a",
       "title": "테스트",
       "contents": "테스트",
       "isDone": false

@@ -2,11 +2,12 @@ import { companyInfoType } from "@/types";
 import Image from "next/image";
 import React from "react";
 
+export const dynamic = "force-dynamic";
+
 const AboutPage = async () => {
-  const res = await fetch("http://localhost:3000/api/company", {
-    cache: "force-cache",
-  });
-  const { companyInfo }: companyInfoType = await res.json();
+  const res = await fetch("http://localhost:4000/companyInfo");
+  const companyInfo: companyInfoType = await res.json();
+  console.log(companyInfo);
 
   return (
     <main className="flex justify-center">
@@ -22,7 +23,7 @@ const AboutPage = async () => {
         <Image
           src={companyInfo.image}
           alt="회사 이미지입니다."
-          width={600}
+          width={400}
           height={600}
         />
       </div>

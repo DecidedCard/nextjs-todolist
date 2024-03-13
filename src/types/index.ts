@@ -1,9 +1,7 @@
 export type companyInfoType = {
-  companyInfo: {
-    name: string;
-    desctiption: string;
-    image: string;
-  };
+  name: string;
+  desctiption: string;
+  image: string;
 };
 
 export type TodoType = {

@@ -13,6 +13,8 @@ const TodoList = ({ isActive }: { isActive: boolean }) => {
     return <>에러!</>;
   }
 
+  console.log(todoList);
+
   return (
     <div className="min-h-72">
       <h2 className="text-2xl text-white ml-4">

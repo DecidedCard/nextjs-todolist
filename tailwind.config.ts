@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import bookImage from "./src/assets/bookImage.jpg";
 
 const config: Config = {
   content: [
@@ -9,9 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "book-bg": "url('../assets/bookImage.jpg')",
+        // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        // "gradient-conic":
+        //   "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },

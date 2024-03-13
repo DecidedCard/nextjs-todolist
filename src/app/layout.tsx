@@ -22,16 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex justify-between">
-          <Header />
-          <Navigation />
+        <div className="0 bg-book-bg bg-cover min-h-screen">
+          <div className="flex justify-between">
+            <Header />
+            <Navigation />
+          </div>
+          <QueryProvider>{children}</QueryProvider>
         </div>
-        <Image
-          src={bookImage}
-          alt="책 이미지 입니다."
-          className="absolute top-0 bottom-16 -z-10 opacity-80"
-        />
-        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );
