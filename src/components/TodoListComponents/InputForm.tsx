@@ -1,3 +1,5 @@
+"use client";
+
 import useTodoInputForm from "@/hook/useTodoInputForm";
 import React from "react";
 
