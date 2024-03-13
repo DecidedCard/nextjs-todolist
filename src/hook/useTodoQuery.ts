@@ -39,7 +39,56 @@ const useTodoQuery = () => {
 
   const addMutate = useAddMutation();
 
-  return { todoList, isError, isLoading, addMutate };
+  const useUpdateMutation = () => {
+    const { mutate: updateMutate } = useMutation({
+      mutationFn: async (Todo: TodoType) => {
+        await fetch("http://localhost:3000/api/todoList", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify(Todo),
+        });
+      },
+      onSuccess: () => {
+        queryClient.invalidateQueries({ queryKey });
+      },
+    });
+    return updateMutate;
+  };
+
+  const updateMutate = useUpdateMutation();
+
+  const useDeleteMutation = () => {
+    const { mutate: deleteMutate } = useMutation({
+      mutationFn: async (item: TodoType) => {
+        await fetch("http://localhost:3000/api/todoList", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify(item),
+        });
+      },
+      onSuccess: () => {
+        queryClient.invalidateQueries({ queryKey });
+      },
+    });
+    return deleteMutate;
+  };
+
+  const deleteMutate = useDeleteMutation();
+
+  return {
+    todoList,
+    isError,
+    isLoading,
+    addMutate,
+    updateMutate,
+    deleteMutate,
+  };
 };
 
 export default useTodoQuery;

@@ -6,21 +6,15 @@
   },
   "todos": [
     {
-      "id": "1",
-      "title": "커피 마시기",
-      "contents": "아메리카노 마시기",
+      "id": "d036",
+      "title": "테스트",
+      "contents": "언제까지 되나 보자",
       "isDone": false
     },
     {
-      "id": "2",
-      "title": "커피 마시기",
-      "contents": "아메리카노 마시기",
-      "isDone": true
-    },
-    {
-      "id": "18d5",
-      "title": "테스트",
-      "contents": "테스트",
+      "id": "c432",
+      "title": "잘된다",
+      "contents": "제발 그냥 처음부터 좀 잘 돼라",
       "isDone": false
     }
   ]

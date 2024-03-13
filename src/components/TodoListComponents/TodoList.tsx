@@ -1,9 +1,10 @@
 "use client";
 
-import useTodoList from "@/hook/useTodoList";
+import useTodoQuery from "@/hook/useTodoQuery";
 
 const TodoList = () => {
-  const { todoList, isError, isLoading } = useTodoList();
+  const { todoList, isError, isLoading, updateMutate, deleteMutate } =
+    useTodoQuery();
   if (isLoading) {
     return <>로딩중입니다...</>;
   }
@@ -12,8 +13,6 @@ const TodoList = () => {
     return <>에러!</>;
   }
 
-  console.log(todoList);
-
   return (
     <section>
       {todoList?.map((item) => {
@@ -21,8 +20,10 @@ const TodoList = () => {
           <div key={item.id}>
             <h2>{item.title}</h2>
             <p>{item.contents}</p>
-            <button>{item.isDone ? "취소" : "완료"}</button>
-            <button>삭제</button>
+            <button onClick={() => updateMutate(item)}>
+              {item.isDone ? "취소" : "완료"}
+            </button>
+            <button onClick={() => deleteMutate(item)}>삭제</button>
           </div>
         );
       })}
