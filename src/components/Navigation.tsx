@@ -3,7 +3,7 @@ import React from "react";
 
 const Navigation = () => {
   return (
-    <nav className="flex justify-evenly items-center h-16 text-2xl">
+    <nav className="flex justify-evenly items-center h-16 text-3xl">
       <Link href={"/about"}>About</Link>
       <Link href={"/report"}>Report</Link>
       <Link href={"/todo-csr"}>Todo-CSR</Link>
