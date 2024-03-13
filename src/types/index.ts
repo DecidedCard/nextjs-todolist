@@ -13,7 +13,4 @@ export type TodoType = {
 
 export type TodoListType = {
   todoList: [TodoType];
-  totalTodoList: number;
-  working: number;
-  done: number;
 };

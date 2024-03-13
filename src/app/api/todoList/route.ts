@@ -12,9 +12,6 @@ export async function GET(request: Request) {
 
   return Response.json({
     todoList,
-    totalTodoList: todoList.length,
-    working: todoList.filter((item: TodoType) => item.isDone === false).length,
-    done: todoList.filter((item: TodoType) => item.isDone === true).length,
   });
 }
 

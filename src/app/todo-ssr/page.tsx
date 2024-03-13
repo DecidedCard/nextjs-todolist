@@ -1,10 +1,12 @@
-import { TodoListType } from "@/types";
+import { TodoType } from "@/types";
 import Link from "next/link";
 import React from "react";
 
 const TodoSSRPage = async () => {
-  const res = await fetch("http://localhost:3000/api/todoList");
-  const { todoList }: TodoListType = await res.json();
+  const res = await fetch("http://localhost:4000/todos", {
+    cache: "no-cache",
+  });
+  const todoList: TodoType[] = await res.json();
 
   return (
     <main>
