@@ -25,14 +25,24 @@ const TodoList = ({ isActive }: { isActive: boolean }) => {
             return (
               <div
                 key={item.id}
-                className="border border-solid border-slate-950 w-64 rounded-lg m-2"
+                className="border border-solid border-slate-950 w-64 rounded-lg m-2 p-2"
               >
                 <h3>{item.title}</h3>
                 <p>{item.contents}</p>
-                <button onClick={() => updateMutate(item)}>
-                  {item.isDone ? "취소" : "완료"}
-                </button>
-                <button onClick={() => deleteMutate(item)}>삭제</button>
+                <div className="flex justify-end gap-2">
+                  <button
+                    onClick={() => updateMutate(item)}
+                    className="bg-green-400 w-14 rounded-2xl"
+                  >
+                    {item.isDone ? "취소" : "완료"}
+                  </button>
+                  <button
+                    onClick={() => deleteMutate(item)}
+                    className="bg-red-500 w-14 rounded-2xl"
+                  >
+                    삭제
+                  </button>
+                </div>
               </div>
             );
           })}
