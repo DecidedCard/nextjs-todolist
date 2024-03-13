@@ -25,10 +25,10 @@ const TodoList = ({ isActive }: { isActive: boolean }) => {
             return (
               <div
                 key={item.id}
-                className="border border-solid border-slate-950 w-64 rounded-lg m-2 p-2"
+                className="flex flex-col justify-between m-2 p-2 min-w-64 min-h-36 rounded-lg border border-solid border-slate-950"
               >
                 <h3>{item.title}</h3>
-                <p>{item.contents}</p>
+                <p className="whitespace">{item.contents}</p>
                 <div className="flex justify-end gap-2">
                   <button
                     onClick={() => updateMutate(item)}
