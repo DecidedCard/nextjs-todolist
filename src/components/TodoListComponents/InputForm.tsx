@@ -23,14 +23,14 @@ const InputForm = () => {
           placeholder="제목을 입력해주세요"
           value={title}
           onChange={onChangeTitleHandler}
-          className="border border-solid border-slate-950 rounded-3xl p-2 w-72 h-10"
+          className="border border-solid border-slate-950 rounded-3xl p-2 w-72 h-10 bg-amber-100 bg-opacity-60"
         />
         <input
           type="text"
           placeholder="내용을 입력해주세요"
           value={contents}
           onChange={onChangeContentsHandler}
-          className="border border-solid border-slate-950 rounded-3xl p-2 w-72 h-10"
+          className="border border-solid border-slate-950 rounded-3xl p-2 w-72 h-10 bg-amber-100 bg-opacity-60"
         />
         <button type="submit" className="bg-green-400 w-14 h-7 rounded-2xl">
           등록

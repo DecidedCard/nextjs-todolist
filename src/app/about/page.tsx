@@ -11,11 +11,11 @@ const AboutPage = async () => {
   return (
     <main className="flex justify-center">
       <div className=" flex flex-col items-center">
-        <h2 className="text-2xl m-3">
+        <h2 className="text-2xl text-white m-3">
           <label>이름: </label>
           {companyInfo.name}
         </h2>
-        <p className="text-xl m-2">
+        <p className="text-xl text-white m-2">
           <label>설명: </label>
           {companyInfo.desctiption}
         </p>

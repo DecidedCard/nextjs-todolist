@@ -3,8 +3,8 @@ import useInput from "./useInput";
 import useTodoQuery from "./useTodoQuery";
 
 const useTodoInputForm = () => {
-  const [title, onChamgeTitleHandler, setTitle] = useInput();
-  const [contents, onChamgeContentsHandler, setContents] = useInput();
+  const [title, onChangeTitleHandler, setTitle] = useInput();
+  const [contents, onChangeContentsHandler, setContents] = useInput();
   const { addMutate } = useTodoQuery();
 
   const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
@@ -24,9 +24,9 @@ const useTodoInputForm = () => {
 
   return {
     title,
-    onChamgeTitleHandler,
+    onChangeTitleHandler,
     contents,
-    onChamgeContentsHandler,
+    onChangeContentsHandler,
     onSubmitHandler,
   };
 };

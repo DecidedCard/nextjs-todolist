@@ -13,15 +13,15 @@ const ReportPage = async () => {
   return (
     <main className="flex justify-center mt-10">
       <div className="flex flex-col justify-evenly h-96">
-        <h2 className="text-3xl">
+        <h2 className="text-3xl text-white">
           <label>TodoList 합계: </label>
           {todoList.totalTodoList}
         </h2>
-        <p className="text-2xl">
+        <p className="text-2xl text-white">
           <label>TodoList Working: </label>
           {todoList.working}
         </p>
-        <p className="text-2xl">
+        <p className="text-2xl text-white">
           <label>TodoList Done: </label>
           {todoList.done}
         </p>
