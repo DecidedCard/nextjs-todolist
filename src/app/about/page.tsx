@@ -21,7 +21,7 @@ const AboutPage = async () => {
         </p>
         <Image
           src={companyInfo.image}
-          alt="회사 이미지 입니다."
+          alt="회사 이미지입니다."
           width={600}
           height={600}
         />
