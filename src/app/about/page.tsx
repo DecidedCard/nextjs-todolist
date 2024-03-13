@@ -3,19 +3,27 @@ import Image from "next/image";
 import React from "react";
 
 const AboutPage = async () => {
-  const res = await fetch("http://localhost:3000/api/company");
+  const res = await fetch("http://localhost:3000/api/company", {
+    cache: "force-cache",
+  });
   const { companyInfo }: companyInfoType = await res.json();
 
   return (
-    <main>
-      <div>
-        <h2>{companyInfo.name}</h2>
-        <p>{companyInfo.desctiption}</p>
+    <main className="flex justify-center">
+      <div className=" flex flex-col items-center">
+        <h2 className="text-2xl m-3">
+          <label>이름: </label>
+          {companyInfo.name}
+        </h2>
+        <p className="text-xl m-2">
+          <label>설명: </label>
+          {companyInfo.desctiption}
+        </p>
         <Image
           src={companyInfo.image}
           alt="회사 이미지 입니다."
-          width={300}
-          height={300}
+          width={600}
+          height={600}
         />
       </div>
     </main>
