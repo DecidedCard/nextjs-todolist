@@ -1,10 +1,9 @@
 "use client";
 
-import { XYType } from "@/types";
 import React, { PropsWithChildren, useState } from "react";
 
 const MousePointer = ({ children }: PropsWithChildren) => {
-  const [xy, setXY] = useState<XYType>();
+  const [xy, setXY] = useState({ x: 0, y: 0 });
 
   const mouseMoveHandler = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>

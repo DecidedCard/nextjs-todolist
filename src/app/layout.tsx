@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <MousePointer>
           {" "}
-          <div className="flex justify-between">
+          <div className="flex justify-between min-w-max">
             <Header />
             <Navigation />
           </div>
