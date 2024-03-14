@@ -14,3 +14,8 @@ export type TodoType = {
 export type TodoListType = {
   todoList: [TodoType];
 };
+
+export type XYType = {
+  x: number;
+  y: number;
+};

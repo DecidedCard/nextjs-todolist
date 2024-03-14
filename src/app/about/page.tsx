@@ -24,6 +24,7 @@ const AboutPage = async () => {
           alt="회사 이미지입니다."
           width={400}
           height={600}
+          className="-z-20"
         />
       </div>
     </main>
