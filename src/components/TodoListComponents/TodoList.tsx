@@ -33,13 +33,15 @@ const TodoList = ({ isActive }: { isActive: boolean }) => {
                 <p>{item.contents}</p>
                 <div className="flex justify-end gap-2">
                   <button
-                    onClick={() => updateMutate(item)}
+                    onClick={() =>
+                      updateMutate({ id: item.id, isDone: item.isDone })
+                    }
                     className="bg-green-400 w-14 rounded-2xl"
                   >
                     {item.isDone ? "취소" : "완료"}
                   </button>
                   <button
-                    onClick={() => deleteMutate(item)}
+                    onClick={() => deleteMutate(item.id)}
                     className="bg-red-500 w-14 rounded-2xl"
                   >
                     삭제

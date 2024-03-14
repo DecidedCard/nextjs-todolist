@@ -6,15 +6,9 @@
   },
   "todos": [
     {
-      "id": "c432",
-      "title": "잘된다",
-      "contents": "제발 그냥 처음부터 좀 잘 돼라",
-      "isDone": true
-    },
-    {
-      "id": "424e",
-      "title": "이게 잘한건지는 모르겠네요",
-      "contents": "css는 진짜 답답해서 미치겠네요",
+      "id": "6a6b",
+      "title": "테스트",
+      "contents": "테스트",
       "isDone": false
     }
   ]

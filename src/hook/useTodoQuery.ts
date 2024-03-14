@@ -10,7 +10,7 @@ const useTodoQuery = () => {
   } = useQuery({
     queryKey,
     queryFn: async () => {
-      const res = await fetch("http://localhost:3000/api/todoList");
+      const res = await fetch("http://localhost:3000/api/todoList/");
       const { todoList }: TodoListType = await res.json();
       return todoList;
     },
@@ -43,14 +43,14 @@ const useTodoQuery = () => {
 
   const useUpdateMutation = () => {
     const { mutate: updateMutate } = useMutation({
-      mutationFn: async (Todo: TodoType) => {
-        await fetch("http://localhost:3000/api/todoList", {
+      mutationFn: async ({ id, isDone }: { id: string; isDone: boolean }) => {
+        await fetch(`http://localhost:3000/api/todoList/${id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
           },
 
-          body: JSON.stringify(Todo),
+          body: JSON.stringify({ isDone: !isDone }),
         });
       },
       onSuccess: () => {
@@ -64,14 +64,12 @@ const useTodoQuery = () => {
 
   const useDeleteMutation = () => {
     const { mutate: deleteMutate } = useMutation({
-      mutationFn: async (item: TodoType) => {
-        await fetch("http://localhost:3000/api/todoList", {
+      mutationFn: async (id: string) => {
+        await fetch(`http://localhost:3000/api/todoList/${id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
           },
-
-          body: JSON.stringify(item),
         });
       },
       onSuccess: () => {
