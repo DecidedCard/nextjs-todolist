@@ -1,4 +1,4 @@
-export type companyInfoType = {
+export type PageInfoType = {
   name: string;
   desctiption: string;
   image: string;

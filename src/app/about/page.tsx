@@ -1,26 +1,28 @@
-import { companyInfoType } from "@/types";
+import { PageInfoType } from "@/types";
 import Image from "next/image";
 import React from "react";
 
 export const dynamic = "force-dynamic";
 
 const AboutPage = async () => {
-  const res = await fetch("http://localhost:4000/companyInfo");
-  const companyInfo: companyInfoType = await res.json();
+  const res = await fetch("http://localhost:4000/pageInfo");
+  const pageInfo: PageInfoType = await res.json();
 
   return (
     <main className="flex justify-center">
-      <div className=" flex flex-col items-center">
-        <h2 className="text-2xl m-3">
-          <label>이름: </label>
-          {companyInfo.name}
-        </h2>
-        <p className="text-xl m-2">
-          <label>설명: </label>
-          {companyInfo.desctiption}
-        </p>
+      <div className=" flex justify-evenly items-center gap-44 mt-10 min-w-max">
+        <div>
+          <h2 className="text-2xl m-3">
+            <label>제목: </label>
+            {pageInfo.name}
+          </h2>
+          <p className="m-2 max-w-lg text-pretty text-xl">
+            <label>설명: </label>
+            {pageInfo.desctiption}
+          </p>
+        </div>
         <Image
-          src={companyInfo.image}
+          src={pageInfo.image}
           alt="회사 이미지입니다."
           width={400}
           height={600}

@@ -1,7 +1,7 @@
 {
-  "companyInfo": {
+  "pageInfo": {
     "name": "Next.js TodoList",
-    "desctiption": "Next.js로 만든 TodoList.",
+    "desctiption": "Next.js로 만든 TodoList. Route Handler를 구현 해 봤고, 4가지 렌더링 방식이 적용되어있는 페이지 입니다.",
     "image": "https://images.velog.io/images/ducks1077/post/397ed207-80a4-4505-a90c-82c88fe3c9d3/todolist.png"
   },
   "todos": [
