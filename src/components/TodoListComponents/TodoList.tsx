@@ -1,20 +1,18 @@
 "use client";
 
 import useTodoQuery from "@/hook/useTodoQuery";
+import Loading from "../Loading";
+import Error from "../Error";
+import { TodoListType, TodoType } from "@/types";
 
-const TodoList = ({ isActive }: { isActive: boolean }) => {
-  const { todoList, isError, isLoading, updateMutate, deleteMutate } =
-    useTodoQuery();
-  if (isLoading) {
-    return <>로딩중입니다...</>;
-  }
-
-  if (isError) {
-    return <>에러!</>;
-  }
-
-  console.log(todoList);
-
+const TodoList = ({
+  todoList,
+  isActive,
+}: {
+  todoList: [TodoType] | undefined;
+  isActive: boolean;
+}) => {
+  const { updateMutate, deleteMutate } = useTodoQuery();
   return (
     <div className="min-h-72">
       <h2 className="text-2xl ml-4">{isActive ? "Done!!!" : "Working..."}</h2>
