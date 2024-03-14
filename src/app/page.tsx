@@ -28,7 +28,7 @@ export default function Home() {
       <Image
         src={todoImage}
         alt="todo이미지 입니다."
-        className="ml-auto w-96"
+        className="ml-auto -z-20 w-96"
       />
     </div>
   );

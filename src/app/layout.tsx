@@ -4,8 +4,6 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import QueryProvider from "./QueryProvider";
 import Header from "@/components/Header";
-import Image from "next/image";
-import bookImage from "@/assets/bookImage.jpg";
 import MousePointer from "@/components/MousePointer";
 
 const inter = Inter({ subsets: ["latin"] });
