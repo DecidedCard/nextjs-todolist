@@ -7,6 +7,16 @@ export async function PATCH(
   const { id } = params;
   const { isDone } = await request.json();
 
+  if (!id || !isDone) {
+    return new Response(
+      JSON.stringify({ message: "id와 isDone이 없습니다." }),
+      {
+        status: 400,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+  }
+
   const response = await fetch(`${url}/${id}`, {
     method: "PATCH",
     headers: {
@@ -15,8 +25,23 @@ export async function PATCH(
     body: JSON.stringify({ isDone }),
   });
 
-  const todo = await response.json();
-  return Response.json({ todo });
+  if (!response.ok) {
+    return new Response(
+      JSON.stringify({ message: "데이터를 업데이트 하지 못 했습니다." }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+  }
+
+  return new Response(
+    JSON.stringify({ message: "데이터를 업데이트 하는데 성공했습니다." }),
+    {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    }
+  );
 }
 
 export async function DELETE(
@@ -24,10 +49,22 @@ export async function DELETE(
   { params }: { params: { id: string } }
 ) {
   const { id } = params;
+
+  if (!id) {
+    return new Response(JSON.stringify({ message: "id가 없습니다." }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
   const response = await fetch(`${url}/${id}`, {
     method: "DELETE",
   });
 
-  const todo = await response.json();
-  return Response.json({ todo });
+  return new Response(
+    JSON.stringify({ message: "데이터를 제거 하는데 성공했습니다." }),
+    {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    }
+  );
 }
