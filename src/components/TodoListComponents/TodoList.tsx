@@ -1,9 +1,7 @@
 "use client";
 
 import useTodoQuery from "@/hook/useTodoQuery";
-import Loading from "../Loading";
-import Error from "../Error";
-import { TodoListType, TodoType } from "@/types";
+import { TodoType } from "@/types";
 
 const TodoList = ({
   todoList,
@@ -25,7 +23,7 @@ const TodoList = ({
             return (
               <div
                 key={item.id}
-                className="flex flex-col justify-between m-2 p-2 min-w-64 min-h-36 rounded-lg border border-solid border-slate-950 bg-amber-100 bg-opacity-60"
+                className="flex flex-col justify-between m-2 p-2 min-w-64 min-h-36 rounded-lg border border-solid border-slate-950 bg-opacity-60"
               >
                 <h3>{item.title}</h3>
                 <p>{item.contents}</p>
@@ -34,13 +32,13 @@ const TodoList = ({
                     onClick={() =>
                       updateMutate({ id: item.id, isDone: item.isDone })
                     }
-                    className="bg-green-400 w-14 rounded-2xl"
+                    className=" w-14 rounded-2xl"
                   >
                     {item.isDone ? "취소" : "완료"}
                   </button>
                   <button
                     onClick={() => deleteMutate(item.id)}
-                    className="bg-red-500 w-14 rounded-2xl"
+                    className=" w-14 rounded-2xl"
                   >
                     삭제
                   </button>
