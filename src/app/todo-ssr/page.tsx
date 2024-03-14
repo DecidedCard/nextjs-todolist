@@ -17,7 +17,7 @@ const TodoSSRPage = async () => {
       </Link>
 
       <div className="min-h-72">
-        <h2 className="text-2xl text-white ml-4">Working...</h2>
+        <h2 className="text-2xl ml-4">Working...</h2>
         <section className="flex flex-wrap m-2">
           {todoList
             .filter((item) => {
@@ -37,7 +37,7 @@ const TodoSSRPage = async () => {
         </section>
       </div>
       <div className="min-h-72">
-        <h2 className="text-2xl text-white ml-4">Done!</h2>
+        <h2 className="text-2xl ml-4">Done!</h2>
         <section className="flex flex-wrap m-2">
           {todoList
             .filter((item) => {

@@ -16,7 +16,7 @@ const InputForm = () => {
       onSubmit={onSubmitHandler}
       className="flex flex-col justify-between items-center m-2 p-2 h-32"
     >
-      <h2 className="text-2xl text-white">TodoList를 작성해 주세요!</h2>
+      <h2 className="text-2xl">TodoList를 작성해 주세요!</h2>
       <div className="flex items-center gap-10">
         <input
           type="text"

@@ -17,9 +17,7 @@ const TodoList = ({ isActive }: { isActive: boolean }) => {
 
   return (
     <div className="min-h-72">
-      <h2 className="text-2xl text-white ml-4">
-        {isActive ? "Done!!!" : "Working..."}
-      </h2>
+      <h2 className="text-2xl ml-4">{isActive ? "Done!!!" : "Working..."}</h2>
       <section className="flex flex-wrap m-2">
         {todoList
           ?.filter((item) => {

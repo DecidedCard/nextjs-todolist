@@ -22,13 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="0 bg-book-bg bg-cover min-h-screen">
-          <div className="flex justify-between">
-            <Header />
-            <Navigation />
-          </div>
-          <QueryProvider>{children}</QueryProvider>
+        <div className="flex justify-between">
+          <Header />
+          <Navigation />
         </div>
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );
