@@ -19,15 +19,15 @@ const ReportPage = async () => {
     <main className="flex justify-center mt-10">
       <div className="flex flex-col justify-evenly h-96">
         <h2 className="text-3xl">
-          <label>TodoList 합계: </label>
+          <label>작성한 TodoList 합계: </label>
           {totalTodoList}
         </h2>
         <p className="text-2xl">
-          <label>TodoList Working: </label>
+          <label>진행중인 Todo Working...: </label>
           {working}
         </p>
         <p className="text-2xl">
-          <label>TodoList Done: </label>
+          <label>완료한 Todo Done: </label>
           {done}
         </p>
       </div>

@@ -11,6 +11,13 @@ const AboutPage = async () => {
   return (
     <main className="flex justify-center">
       <div className=" flex justify-evenly items-center gap-44 mt-10 min-w-max">
+        <Image
+          src={pageInfo.image}
+          alt="회사 이미지입니다."
+          width={400}
+          height={600}
+          className="-z-20"
+        />
         <div>
           <h2 className="text-2xl m-3">
             <label>제목: </label>
@@ -21,13 +28,6 @@ const AboutPage = async () => {
             {pageInfo.desctiption}
           </p>
         </div>
-        <Image
-          src={pageInfo.image}
-          alt="회사 이미지입니다."
-          width={400}
-          height={600}
-          className="-z-20"
-        />
       </div>
     </main>
   );
