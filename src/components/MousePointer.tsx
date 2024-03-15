@@ -19,7 +19,7 @@ const MousePointer = ({ children }: PropsWithChildren) => {
       {children}
       <div
         style={{ transform: `translate(${xy?.x}px, ${xy?.y}px)` }}
-        className="absolute ease-linear duration-75 rounded-full -z-10 w-12 h-12 -left-4 -top-4 border-2 border-solid border-gray-900"
+        className="absolute rounded-full -z-10 w-12 h-12 -left-4 -top-4 border-2 border-solid border-white"
       />
     </div>
   );

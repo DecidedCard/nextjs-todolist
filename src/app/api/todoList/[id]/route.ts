@@ -7,6 +7,14 @@ export async function PATCH(
   const { id } = params;
   const { isDone } = await request.json();
 
+  const response = await fetch(`${url}/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ isDone }),
+  });
+
   if (!id || !isDone) {
     return new Response(
       JSON.stringify({ message: "id와 isDone이 없습니다." }),
@@ -16,14 +24,6 @@ export async function PATCH(
       }
     );
   }
-
-  const response = await fetch(`${url}/${id}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ isDone }),
-  });
 
   if (!response.ok) {
     return new Response(

@@ -9,7 +9,7 @@ const ReportNavigateButton = () => {
   return (
     <button
       onClick={() => route.push("/report")}
-      className="w-52 h-9 rounded-xl opacity-90 bg-gray-300"
+      className="btn btn-active btn-primary btn-sm"
     >
       TodoList 통계보러가기
     </button>

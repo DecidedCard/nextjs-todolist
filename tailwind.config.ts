@@ -12,6 +12,6 @@ const config: Config = {
       backgroundImage: {},
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;

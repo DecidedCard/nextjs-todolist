@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import QueryProvider from "./QueryProvider";
-import Header from "@/components/Header";
 import MousePointer from "@/components/MousePointer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,7 +23,6 @@ export default function RootLayout({
         <MousePointer>
           {" "}
           <div className="flex justify-between min-w-max">
-            <Header />
             <Navigation />
           </div>
           <QueryProvider>{children}</QueryProvider>

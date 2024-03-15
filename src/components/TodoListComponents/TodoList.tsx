@@ -21,27 +21,26 @@ const TodoList = ({
           })
           .map((item) => {
             return (
-              <div
-                key={item.id}
-                className="flex flex-col justify-between m-2 p-2 min-w-64 min-h-36 rounded-lg border border-solid border-slate-950 bg-opacity-60"
-              >
-                <h3>{item.title}</h3>
-                <p>{item.contents}</p>
-                <div className="flex justify-end gap-2">
-                  <button
-                    onClick={() =>
-                      updateMutate({ id: item.id, isDone: item.isDone })
-                    }
-                    className=" w-14 rounded-2xl"
-                  >
-                    {item.isDone ? "취소" : "완료"}
-                  </button>
-                  <button
-                    onClick={() => deleteMutate(item.id)}
-                    className=" w-14 rounded-2xl"
-                  >
-                    삭제
-                  </button>
+              <div key={item.id} className="card w-96 bg-base-100 shadow-xl">
+                <div className="card-body">
+                  <h2 className="card-title">{item.title}</h2>
+                  <p>{item.contents}</p>
+                  <div className="card-actions justify-end">
+                    <button
+                      className="btn"
+                      onClick={() => {
+                        updateMutate({ id: item.id, isDone: item.isDone });
+                      }}
+                    >
+                      {item.isDone ? "취소" : "완료"}
+                    </button>
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => deleteMutate(item.id)}
+                    >
+                      삭제
+                    </button>
+                  </div>
                 </div>
               </div>
             );
