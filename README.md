@@ -18,7 +18,7 @@ yarn
 
 yarn server
 
-pnpm dev
+yarn dev
 # or
 bun build && yarn start
 ```
